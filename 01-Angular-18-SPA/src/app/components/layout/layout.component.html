@@ -60,10 +60,20 @@
         <li class="nav-item" style="margin-top:-12px;">
           <a class="nav-link" routerLink="post-api-2">Post API 2</a>
         </li>
+        <li class="nav-item" style="margin-top:-12px;">
+          <a class="nav-link" routerLink="rxjs-basic">Rxjs-basic</a>
+        </li>
+        <li class="nav-item" style="margin-top:-12px;">
+          <a class="nav-link" routerLink="rxjs-operator">Rxjs-Operator</a>
+        </li>
+        <li class="nav-item" style="margin-top:-12px;">
+          <a class="nav-link" routerLink="sub-beh-replay">Sub-Beh-Replay</a>
+        </li>
       </ul>
       <form class="d-flex">
-        <select [(ngModel)]="selectedRole" name="selectedRole" (ngModelChange)="onRoleChange($event)">
+        <select (change)="onRoleChange2($event)" [(ngModel)]="selectedRole" name="selectedRole" (ngModelChange)="onRoleChange($event)">
           <option value="">Select Role</option>
+          <option value="Admin">Admin</option>
           <option value="user">User Role</option>
           <option value="guest">Guest Role</option>
         </select>        

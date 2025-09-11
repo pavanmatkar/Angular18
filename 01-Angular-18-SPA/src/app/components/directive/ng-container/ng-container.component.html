@@ -20,7 +20,8 @@
             <tbody>
                 <ng-container *ngIf="isApi">
                     <tr>
-                        <td colspan="4" class="text-center">
+                        <app-spinner></app-spinner>
+                        <!-- <td colspan="4" class="text-center">
                             <div class="spinner-grow text-muted"></div>
                             <div class="spinner-grow text-primary"></div>
                             <div class="spinner-grow text-success"></div>
@@ -30,7 +31,7 @@
                             <div class="spinner-grow text-secondary"></div>
                             <div class="spinner-grow text-dark"></div>
                             <div class="spinner-grow text-light"></div>
-                        </td>
+                        </td> -->
                     </tr>
                 </ng-container>
                 <ng-container *ngIf="!isApi">

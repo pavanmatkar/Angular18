@@ -14,6 +14,7 @@ export class LayoutComponent {
   selectedRole: string = '';
   router = inject(Router);
   loggedUserData: any;
+  deptSrv = inject(DepartmentService);
 
   constructor(private deptService: DepartmentService){
 
@@ -27,5 +28,10 @@ export class LayoutComponent {
     debugger;
     this.deptService.onRoleChange$.next(role)
     // this.deptService.role$.next(role)
+  }
+  onRoleChange2(event:any){
+    debugger;
+    this.deptSrv.roleBehaviour$.next(event.target.value)
+    this.deptSrv.roleSub$.next(event.target.value)
   }
 }

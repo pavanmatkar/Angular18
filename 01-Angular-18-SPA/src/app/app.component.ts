@@ -1,6 +1,5 @@
 import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { RouterLink } from "@angular/router";
 import { LayoutComponent } from "./components/layout/layout.component";
 
 

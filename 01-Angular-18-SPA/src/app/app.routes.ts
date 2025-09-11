@@ -20,6 +20,9 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { authGuard } from './service/auth.guard';
 import { SignalComponent } from './components/signal/signal.component';
 import { PostApi2Component } from './components/apiIntegration/post-api-2/post-api-2.component';
+import { RxjsBasicComponent } from './rxjs-series/rxjs-basic/rxjs-basic.component';
+import { RxjsOperatorComponent } from './rxjs-series/rxjs-operator/rxjs-operator.component';
+import { SubBehReplayComponent } from './rxjs-series/sub-beh-replay/sub-beh-replay.component';
 
 export const routes: Routes = [
   // default route
@@ -108,6 +111,18 @@ export const routes: Routes = [
       {
         path: 'post-api-2',
         component: PostApi2Component,
+      },
+      {
+        path: 'rxjs-basic',
+        component: RxjsBasicComponent,
+      },
+      {
+        path: 'rxjs-operator',
+        component: RxjsOperatorComponent,
+      },
+      {
+        path: 'sub-beh-replay',
+        component: SubBehReplayComponent,
       },
     ],
   }

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { signal } from '@angular/core'; 
+import { DepartmentService } from '../../service/department.service';
 
 @Component({
   selector: 'app-data-binding',
@@ -24,8 +25,20 @@ currentDate: Date = new Date();
 // this is the example of signal
 firstName = signal("Chetan Jogi");
 
+deptSrv = inject(DepartmentService)
+userId: number = 0;
 constructor(){
-  
+  this.deptSrv.roleBehaviour$.subscribe((res:string)=>{
+    debugger;
+  })
+  this.deptSrv.roleSub$.subscribe((res:string)=>{
+    debugger;
+  })
+}
+getUser(){
+  this.deptSrv.getUserById(this.userId).subscribe((res:any)=>{
+    debugger;
+  })
 }
 
 changeCourseName(){

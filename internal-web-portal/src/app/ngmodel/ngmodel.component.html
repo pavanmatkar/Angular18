@@ -2,19 +2,19 @@
     <h3>Question 4. ngModel</h3>
     <ul>
         <li>First Name : </li>
-        <input type="text" placeholder="Enter Your First Name">
+        <input type="text" [(ngModel)]="firstName" placeholder="Enter Your First Name">
         <li>Last Name : </li>
-        <input type="text" placeholder="Enter Your Last Name">
+        <input type="text" [(ngModel)]="lastName" placeholder="Enter Your Last Name">
         <li>Age : </li>
-        <input type="text" placeholder="Enter Your Age">
+        <input type="text" [(ngModel)]="age" placeholder="Enter Your Age">
         <li>Location : </li>
-        <input type="text" placeholder="Enter Your Location">
+        <input type="text" [(ngModel)]="location" placeholder="Enter Your Location">
     </ul>
     <h3>User Profile</h3>
     <ul>
-        <li>First Name {{firstName}}</li>
-        <li>Last Name {{lastName}}</li>
-        <li>Age {{age}}</li>
-        <li>Location {{location}}</li>
+        <li>First Name : {{firstName}}</li>
+        <li>Last Name : {{lastName}}</li>
+        <li>Age : {{age}}</li>
+        <li>Location : {{location}}</li>
     </ul>
 </div>

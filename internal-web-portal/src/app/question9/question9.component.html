@@ -1,0 +1,16 @@
+<h3>Question 9. change button color based on form validity</h3>
+<form #userForm="ngForm" novalidate>
+  <div class="mb-3 mt-3">
+    <label for="uname" class="form-label">Username:</label>
+    <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required ngModel #uname="ngModel">
+    <div *ngIf="userForm.submitted && uname.valid" class="valid-feedback">✅ Looks good!</div>
+    <div *ngIf="userForm.submitted && uname.errors?.['required']" class="invalid-feedback">Username is required.</div>
+    <div *ngIf="userForm.submitted && uname.errors?.['minlength']" class="invalid-feedback">
+        Username must be at least 3 characters long.
+    </div>
+  </div>
+  <button type="submit"
+  [ngClass]="{'btn-valid': userForm.valid, 'btn-invalid': userForm.invalid}"
+  [ngStyle]="{'background-color': userForm.valid ? 'green' : 'red', 'color': 'white' }"
+  >Submit</button>
+</form>

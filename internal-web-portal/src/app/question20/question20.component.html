@@ -1,0 +1,40 @@
+<h3>Question 20. If Form Input empty display error message</h3>
+<div class="row">
+  <div class="col-8">
+    <form class="row g-3">
+      <div class="col-md-4">
+        <label class="form-label">First name</label>
+        <input
+          type="text"
+          [(ngModel)]="studentObj.firstName"
+          name="firstName"
+          class="form-control"
+          required
+          minlength="3"
+        />
+        <div class="text-danger">
+          <span></span>
+          <span>Min 3 Char Required</span>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            [(ngModel)]="studentObj.isAcceptTerms"
+            name="isAcceptTerms"
+            type="checkbox"
+          />
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-secondary" type="button">Reset form</button>
+
+        <button class="btn btn-primary mx-2" type="button">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

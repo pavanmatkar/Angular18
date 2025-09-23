@@ -13,4 +13,10 @@ export class Question20Component {
     firstName: '',
     isAcceptTerms: false,
   }
+  formValue: any;
+
+  onSubmit(){
+    debugger;
+    this.formValue = this.studentObj;
+  }
 }

@@ -1,0 +1,16 @@
+<h3>Question 22. UserService</h3>
+<h5>Employee List</h5>
+<table style="margin-left: 10px;" border="1" cellpadding="5">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Salary</th>
+    </tr>
+    <tr *ngFor="let emp of employees">
+        <td>{{emp.empId}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.city}}</td>
+        <td>{{emp.salary}}</td>
+    </tr>
+</table>

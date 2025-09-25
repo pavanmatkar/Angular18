@@ -1,0 +1,27 @@
+<h3>Question 16. Use trackBy in *ngFor for performance</h3>
+<h4>Admin Panel</h4>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>id</th>
+        <th>location</th>
+        <th>salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userList; 
+      trackBy: trackByUser
+      ">
+        <td>{{ user.name }}</td>
+        <td>{{ user.id }}</td>
+        <td>{{ user.location }}</td>
+        <td>{{ user.salary }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="shuffle()">Shuffle Users</button>
+</div>
+
+<!--  -->

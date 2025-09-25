@@ -1,0 +1,16 @@
+<h3>Question 17. show different messages based on user role</h3>
+<form>
+    <select [(ngModel)]="role" name="role">
+        <option value="">Default</option>
+        <option value="admin">Admin</option>
+        <option value="editor">Editor</option>
+        <option value="viewer">Viewer</option>
+    </select>
+</form>
+<div [ngSwitch]="role">
+    <p *ngSwitchCase="'admin'">Welcome Admin User</p>
+    <p *ngSwitchCase="'editor'">Welcome Editor User</p>
+    <p *ngSwitchCase="'viewer'">Welcome Viewer User</p>
+    <p *ngSwitchDefault>Welcome Default User</p>
+    <app-question19 [text]="'Question 19'" [btnClass]="'btn-primary'"></app-question19>
+</div>

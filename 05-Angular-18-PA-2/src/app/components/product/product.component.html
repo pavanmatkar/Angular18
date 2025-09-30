@@ -1,0 +1,7 @@
+<h3>Product Details</h3>
+<div class="card p-3 m-2" style="width: 200px; background-color: yellowgreen;">
+    <h5 class="card-title">Headphones</h5>
+    <img src="headphones.png" alt="headphones" class="img-fluid">
+    <app-rating [rating]="4.5" (ratingSelected)="onRatingReceived($event)"></app-rating>
+    <p>You rated: {{selectedRating}}</p>
+</div>

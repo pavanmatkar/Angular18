@@ -1,0 +1,13 @@
+<h5>Users List from local JSON</h5>
+
+<div *ngIf="loading">
+    <p>Loading users...</p>
+</div>
+
+<ul *ngIf="!loading && users.length">
+    <li *ngFor="let user of users">
+        <strong>{{user.name}}</strong> ({{user.email}})
+    </li> 
+</ul>
+
+<p *ngIf="!loading && !users.length">No users found.</p>

@@ -1,0 +1,38 @@
+<div class="login-container">
+    <h2>Login</h2>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <input type="email"
+        name="email"
+        [(ngModel)]="studentObj.email"
+        placeholder="Enter email"
+        required
+        email
+        #email="ngModel"
+        >
+        <div class="error" *ngIf="email.invalid && email.touched">
+            <span *ngIf="email.errors?.['required']">Email is required.</span>
+            <span *ngIf="email.errors?.['email']">Enter a valid email.</span>
+        </div>
+
+        <br>
+
+        <input type="password"
+        name="password"
+        [(ngModel)]="studentObj.password"
+        placeholder="Enter password"
+        required
+        minlength="6"
+        pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,}$"
+        #password="ngModel"
+        >
+        <div class="error" *ngIf="password.invalid && password.touched">
+            <span *ngIf="password.errors?.['required']">Password is required.</span>
+            <span *ngIf="password.errors?.['minlength']">Password must be at least 6 characters.</span>
+            <span *ngIf="password.errors?.['pattern']">Password must include at least one number and one symbol.</span>
+        </div>
+        
+        <br>
+
+        <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+</div>

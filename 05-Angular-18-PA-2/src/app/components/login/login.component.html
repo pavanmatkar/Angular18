@@ -1,0 +1,11 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <input formControlName="username" placeholder="Username">
+    <input type="password" formControlName="password" placeholder="Password">
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+</form>
+
+<div *ngIf="message" style="margin-top: 10px; font-weight: bold;">
+    {{message}}
+</div>
+
+<button *ngIf="auth.isLoggedIn()" (click)="logout()">Logout</button>

@@ -1,0 +1,19 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div formArrayName="phones">
+        <div *ngFor="let phone of phones.controls; let i = index">
+            <label>Phone {{i + 1}}:</label>
+            <input [formControlName]="i" placeholder="Enter phone number">
+
+            <!-- validation messages -->
+            <div *ngIf="phone.errors?.['required']">Phone number is required</div>
+            <div *ngIf="phone.errors?.['pattern']">Enter a valid 10-digit phone number</div>
+
+            <!-- remove button (but keep at least one field) -->
+             <button type="button" (click)="removePhone(i)" *ngIf="phones.length > 1">Remove</button>
+             
+        </div>
+    </div>
+    <button type="button" (click)="addPhone()">➕ Add more</button>
+    <br><br>
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>

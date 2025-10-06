@@ -1,0 +1,9 @@
+<h5>User Details</h5>
+<div *ngIf="loading">Loading user data...</div>
+<div *ngIf="errorMessage" class="error">
+    {{errorMessage}}
+</div>
+<div>
+    <p><strong>Name: </strong> {{userData.name}}</p>
+    <p><strong>Email: </strong>{{userData.email}}</p>
+</div>

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgIf, CommonModule } from "@angular/common";
+import { SharedModule } from '../../shared/shared/shared.module';
 
 interface User {
   id: number;
@@ -11,12 +12,17 @@ interface User {
 @Component({
   selector: 'app-json',
   standalone: true,
-  imports: [NgIf, CommonModule],
+  imports: [NgIf, CommonModule,SharedModule],
   templateUrl: './json.component.html',
   styleUrl: './json.component.css'
 })
 
 export class JsonComponent implements OnInit{
+  showModal: boolean = false;
+  toggleModal(){
+    this.showModal = !this.showModal;
+  }
+
   users: User[] = [];
   loading: boolean = true;
 
@@ -24,7 +30,7 @@ export class JsonComponent implements OnInit{
 
   ngOnInit(): void {
     // Load mock users from local JSON
-    this.http.get<User[]>('assets/users.json')
+    this.http.get<User[]>('users.json')
     .subscribe({
       next: data => {
         this.users = data;

@@ -11,3 +11,12 @@
 </ul>
 
 <p *ngIf="!loading && !users.length">No users found.</p>
+
+<app-card title="Profile Card">
+    <p>User details go here.</p>
+    <app-button label="Edit" (click)="toggleModal()"></app-button>
+</app-card>
+
+<app-modal [isOpen]="showModal">
+    <p>Modal content here</p>
+</app-modal>

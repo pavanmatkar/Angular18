@@ -1,0 +1,9 @@
+<h2>Our Products</h2>
+<div class="product-grid">
+    <app-product-card
+    *ngFor="let product of products"
+    [title]="product.title"
+    [price]="product.price"
+    [imageUrl]="product.imageUrl">
+    </app-product-card>
+</div>

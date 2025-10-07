@@ -1,0 +1,41 @@
+<div class="tabs">
+    <button
+    class="tab-btn"
+    [ngClass]="{active: activeTab === 'info'}"
+    (click)="setTab('info')">
+        Product Info
+    </button>
+
+    <button class="tab-btn"
+    [ngClass]="{active: activeTab === 'reviews'}"
+    (click)="setTab('reviews')">
+        Reviews
+    </button>
+
+    <button class="tab-btn"
+    [ngClass]="{active: activeTab === 'specs'}"
+    (click)="setTab('specs')">
+        Specs
+    </button>
+</div>
+
+<div class="tab-content">
+    <div *ngIf="activeTab === 'info'">
+        <h3>Product Information</h3>
+        <p>This is a high-quality product made from durable materials.</p>
+    </div>
+
+    <div *ngIf="activeTab === 'reviews'">
+        <h3>Customer Reviews</h3>
+        <p>⭐ 4.5/5 based on 120 reviews</p>
+    </div>
+
+    <div *ngIf="activeTab === 'specs'">
+        <h3>Technical Specifications</h3>
+        <ul>
+            <li>Material: Stainless Steel</li>
+            <li>Weight: 1.2kg</li>
+            <li>Warranty: 2 Years</li>
+        </ul>
+    </div>
+</div>

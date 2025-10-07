@@ -1,0 +1,21 @@
+.sidebar{
+    width: 150px;
+    background-color: #1f2937; /* dark gray */
+    color: white;
+    height: 100vh;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.sidebar.hidden{
+    transform: translateX(-100%)
+}
+
+@media(min-width: 992px){
+    .sidebar{
+        transform: translateX(0);
+    }
+}

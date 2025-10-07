@@ -1,0 +1,9 @@
+<div *ngFor="let user of users">
+    <p>{{user.firstName}} {{user.lastName}}</p>
+</div>
+
+<div class="pagination-controls">
+  <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+  <span>Page {{ currentPage }} / {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+</div>

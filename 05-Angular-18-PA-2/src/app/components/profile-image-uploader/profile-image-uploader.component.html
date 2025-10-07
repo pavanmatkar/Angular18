@@ -1,0 +1,15 @@
+<div class="uploader-container">
+    <h3>Upload and Preview Profile Picture</h3>
+
+    <input type="file" accept="image/*" (change)="onFileSelected($event)">
+
+    <div *ngIf="imagePreview" class="preview-container">
+        <h4>Preview:</h4>
+        <img [src]="imagePreview" alt="Preview" class="preview-img">
+
+        <div class="btn-group">
+            <button (click)="onUpload()" class="upload-btn">Upload</button>
+            <button (click)="onRemove()" class="remove-btn">Remove</button>
+        </div>
+    </div>
+</div>

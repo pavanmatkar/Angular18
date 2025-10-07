@@ -1,0 +1,49 @@
+<form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
+  <h3>Personal Information</h3>
+  <div formGroupName="personalInfo">
+    <label>Full Name:</label>
+    <input formControlName="fullName" type="text" />
+    
+    <label>Email:</label>
+    <input formControlName="email" type="email" />
+
+    <label>Phone:</label>
+    <input formControlName="phone" type="text" />
+  </div>
+
+  <hr>
+
+  <h3>Education</h3>
+  <div formArrayName="education">
+    <div *ngFor="let edu of education.controls; let i=index" [formGroupName]="i">
+      <label>Degree:</label>
+      <input formControlName="degree" type="text" />
+
+      <label>Institution:</label>
+      <input formControlName="institution" type="text" />
+
+      <label>Year:</label>
+      <input formControlName="year" type="number" />
+
+      <button type="button" (click)="removeEducation(i)" *ngIf="education.length > 1">Remove</button>
+    </div>
+  </div>
+  <button type="button" (click)="addEducation()">Add Education</button>
+
+  <hr>
+
+  <h3>Skills</h3>
+  <div formArrayName="skills">
+    <div *ngFor="let skillCtrl of skills.controls; let i=index">
+      <label>
+        <input type="checkbox" [formControlName]="i" />
+        {{ availableSkills[i] }}
+      </label>
+    </div>
+  </div>
+
+  <hr>
+
+  <button type="submit">Submit Application</button>
+</form>
+

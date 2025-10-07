@@ -22,6 +22,9 @@ import { ProductTabsComponent } from './components/product-tabs/product-tabs.com
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { Home1Component } from './components/home1/home1.component';
+import { ProductDisplayComponent } from './components/product-display/product-display.component';
+import { ProfileImageUploaderComponent } from './components/profile-image-uploader/profile-image-uploader.component';
+import { JobApplicationComponent } from './components/job-application/job-application.component';
 
 export const routes: Routes = [
     {
@@ -111,15 +114,42 @@ export const routes: Routes = [
         component: DashboardComponent,
     },
 //comment
-    {
-  path: 'admin-dashboard1',
-    loadChildren: () =>
-    import('./components/admin-dashboard1/admin-dashboard1.component').then((m) => m.AdminDashboard1Component) },
-    { path: 'home1', component: Home1Component },
+//     {
+//   path: 'admin-dashboard1',
+//     loadChildren: () =>
+//     import('./components/admin-dashboard1/admin-dashboard1.component').then((m) => m.AdminDashboard1Component) },
+//     { path: 'home1', component: Home1Component },
 //comment
+
+//comment
+{
+    path: 'admin-dashboard1',
+    loadComponent: () =>
+      import('./components/admin-dashboard1/admin-dashboard1.component')
+        .then((m) => m.AdminDashboard1Component)
+  },
+  {
+    path: 'home1',
+    component: Home1Component
+  },
+//comment
+
+
     {
         path: 'user-list',
         component: UserListComponent,
+    },
+    {
+        path: 'product-display',
+        component: ProductDisplayComponent,
+    },
+    {
+        path: 'profile-image-uploader',
+        component: ProfileImageUploaderComponent,
+    },
+    {
+        path: 'job-application',
+        component: JobApplicationComponent,
     },
 
 ];

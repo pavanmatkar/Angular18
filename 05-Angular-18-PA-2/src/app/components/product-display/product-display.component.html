@@ -1,0 +1,22 @@
+<div>
+    <label>Filter by Category:</label>
+    <select [(ngModel)]="selectedCategory">
+        <option value="All">All</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Clothing">Clothing</option>
+    </select>
+
+    <label> Sort by Price:</label>
+    <select [(ngModel)]="sortOrder">
+        <option value="asc">Low to High</option>
+        <option value="desc">High to Low</option>
+    </select>
+</div>
+
+<hr>
+
+<ul>
+    <li *ngFor="let p of products | filterByCategory:selectedCategory | sortByPrice:sortOrder">
+        {{p.name}} - {{p.category}} - ₹{{ p.price }}
+    </li>
+</ul>

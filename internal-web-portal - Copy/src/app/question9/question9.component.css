@@ -1,8 +1,0 @@
-.btn-valid{
-    border: 2px solid green;
-    cursor: pointer;
-}
-.btn-invalid{
-    border: 2px solid red;
-    cursor: not-allowed;
-}

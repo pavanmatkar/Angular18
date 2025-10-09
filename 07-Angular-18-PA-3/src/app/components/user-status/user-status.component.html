@@ -1,0 +1,6 @@
+<p *ngIf="auth.loggedIn$ | async; else offline">
+      👤 User is online
+    </p>
+    <ng-template #offline>
+      <p>❌ User is offline</p>
+    </ng-template>

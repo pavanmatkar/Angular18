@@ -1,0 +1,28 @@
+.product-card {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.tab-content {
+  margin-top: 12px;
+  padding: 8px;
+}
+
+.review {
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+
+  strong {
+    margin-right: 8px;
+  }
+  
+  span {
+    color: #fbc02d; /* gold color for stars */
+  }
+
+  p {
+    margin: 4px 0 0 0;
+  }
+}

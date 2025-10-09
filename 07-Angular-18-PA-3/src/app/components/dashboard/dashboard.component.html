@@ -1,0 +1,11 @@
+<h2>📊 Dynamic Component Loader</h2>
+<button mat-raised-button color="primary" (click)="load('chart')">
+  Show Chart
+</button>
+<button mat-raised-button color="accent" (click)="load('table')">
+  Show Table
+</button>
+
+<div class="container">
+  <ng-container #dynamicContainer></ng-container>
+</div>

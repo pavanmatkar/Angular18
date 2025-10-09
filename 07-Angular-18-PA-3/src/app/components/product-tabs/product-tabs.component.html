@@ -1,0 +1,36 @@
+<mat-card class="product-card">
+  <h2>{{ product.name }}</h2>
+
+  <mat-tab-group>
+    <!-- Overview Tab -->
+    <mat-tab label="Overview">
+      <div class="tab-content">
+        <p>{{ product.overview }}</p>
+      </div>
+    </mat-tab>
+
+    <!-- Details Tab -->
+    <mat-tab label="Details">
+      <div class="tab-content">
+        <ul>
+          <li><strong>Author:</strong> {{ product.details.author }}</li>
+          <li><strong>Pages:</strong> {{ product.details.pages }}</li>
+          <li><strong>Publisher:</strong> {{ product.details.publisher }}</li>
+          <li><strong>ISBN:</strong> {{ product.details.isbn }}</li>
+        </ul>
+      </div>
+    </mat-tab>
+
+    <!-- Reviews Tab -->
+    <mat-tab label="Reviews">
+      <div class="tab-content">
+        <div *ngFor="let review of product.reviews" class="review">
+          <strong>{{ review.user }}</strong> 
+          <span>⭐ {{ review.rating }}</span>
+          <p>{{ review.comment }}</p>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>
+

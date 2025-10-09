@@ -1,0 +1,6 @@
+<button *ngIf="!(auth.loggedIn$ | async)" mat-flat-button color="primary" (click)="login()">
+      Login
+    </button>
+    <button *ngIf="auth.loggedIn$ | async" mat-stroked-button color="warn" (click)="logout()">
+      Logout
+    </button>

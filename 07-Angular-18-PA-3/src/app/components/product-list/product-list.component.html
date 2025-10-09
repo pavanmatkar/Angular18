@@ -1,0 +1,30 @@
+<div class="toolbar">
+  <mat-form-field appearance="fill">
+    <mat-label>Filter by Category</mat-label>
+    <mat-select [(value)]="selectedCategory">
+      <mat-option *ngFor="let c of categories" [value]="c">
+        {{ c | titlecase }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-stroked-button color="primary" (click)="selectedCategory = 'all'">
+    <mat-icon>refresh</mat-icon> Reset
+  </button>
+</div>
+
+<div class="product-grid">
+  <mat-card *ngFor="let product of filteredProducts" class="product-card">
+    <img mat-card-image [src]="product.image" alt="{{ product.name }}">
+    <mat-card-content>
+      <h3>{{ product.name }}</h3>
+      <p class="price">₹{{ product.price }}</p>
+      <p class="category">{{ product.category | titlecase }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="accent">
+        <mat-icon>shopping_cart</mat-icon> Add to Cart
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

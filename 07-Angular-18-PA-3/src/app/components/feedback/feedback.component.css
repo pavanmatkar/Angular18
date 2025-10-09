@@ -1,0 +1,51 @@
+.feedback-card {
+  max-width: 800px;
+  margin: 24px auto;
+  border-radius: 12px;
+  overflow: visible;
+  padding: 12px;
+}
+
+mat-card-header {
+  display: flex;
+  align-items: center;
+  mat-icon {
+    font-size: 36px;
+    margin-right: 12px;
+  }
+}
+
+.feedback-form {
+  .row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .full { flex: 1 1 100%; }
+  .half { flex: 1 1 48%; min-width: 220px; }
+
+  .rating-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-top: 10px;
+    .rating-label {
+      width: 64px;
+      font-weight: 600;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 14px;
+  }
+}
+
+/* small screens */
+@media (max-width: 600px) {
+  .half { flex: 1 1 100%; }
+  mat-card-header mat-icon { font-size: 28px; margin-right: 8px; }
+}

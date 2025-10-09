@@ -151,5 +151,4 @@ export const routes: Routes = [
         path: 'job-application',
         component: JobApplicationComponent,
     },
-
 ];

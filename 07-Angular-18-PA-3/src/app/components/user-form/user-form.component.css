@@ -1,0 +1,60 @@
+.user-form {
+  max-width: 500px;
+  margin: 32px auto;
+  padding: 24px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+input.ng-touched.ng-invalid {
+  border-color: #e74c3c;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: bold;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #3b82f6;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

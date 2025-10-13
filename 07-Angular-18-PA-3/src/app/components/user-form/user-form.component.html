@@ -1,0 +1,70 @@
+<form [formGroup]="userForm" (ngSubmit)="submit()" class="user-form">
+  <h2>🏠 User Details</h2>
+
+  <!-- Name -->
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" formControlName="name">
+    <div class="error" *ngIf="f['name'].touched && f['name'].invalid">
+      Name is required (min 3 chars)
+    </div>
+  </div>
+
+  <!-- Email -->
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" formControlName="email">
+    <div class="error" *ngIf="f['email'].touched && f['email'].invalid">
+      Enter a valid email
+    </div>
+  </div>
+
+  <!-- Age -->
+  <div class="form-group">
+    <label>Age</label>
+    <input type="number" formControlName="age">
+    <div class="error" *ngIf="f['age'].touched && f['age'].invalid">
+      Age must be a positive number
+    </div>
+  </div>
+
+  <!-- Address Group -->
+  <fieldset formGroupName="address">
+    <legend>Address</legend>
+
+    <div class="form-group">
+      <label>Street</label>
+      <input type="text" formControlName="street">
+      <div class="error" *ngIf="address.controls['street'].touched && address.controls['street'].invalid">
+        Street is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>City</label>
+      <input type="text" formControlName="city">
+      <div class="error" *ngIf="address.controls['city'].touched && address.controls['city'].invalid">
+        City is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>State</label>
+      <input type="text" formControlName="state">
+      <div class="error" *ngIf="address.controls['state'].touched && address.controls['state'].invalid">
+        State is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>ZIP Code</label>
+      <input type="text" formControlName="zip">
+      <div class="error" *ngIf="address.controls['zip'].touched && address.controls['zip'].invalid">
+        Enter a valid 5-digit ZIP code
+      </div>
+    </div>
+  </fieldset>
+
+  <button type="submit">Submit</button>
+</form>
+

@@ -1,0 +1,22 @@
+<!-- Only render when payload exists -->
+<div *ngIf="payload() as p" class="overlay" (click)="onBackdropClick()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <header class="modal-header">
+      <h3 class="modal-title">{{ p.title }}</h3>
+    </header>
+
+    <section class="modal-body">
+      <p>{{ p.message }}</p>
+    </section>
+
+    <footer class="modal-footer">
+      <button class="btn btn-secondary" *ngIf="p.showCancel" (click)="onCancel()">
+        {{ p.cancelText }}
+      </button>
+      <button class="btn btn-primary" (click)="onOk()">
+        {{ p.okText }}
+      </button>
+    </footer>
+  </div>
+</div>
+

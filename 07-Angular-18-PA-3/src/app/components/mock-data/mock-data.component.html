@@ -1,0 +1,11 @@
+<div *ngIf="data$ | async as data; else loading">
+  <h3>Videos Loaded:</h3>
+  <ul>
+    <li *ngFor="let video of data">{{ video }}</li>
+  </ul>
+</div>
+
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>
+

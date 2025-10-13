@@ -1,1 +1,14 @@
-<p>messages works!</p>
+<div class="messages-container">
+    <h3>Chat</h3>
+
+     <!-- Async pipe subscribes automatically -->
+  <div *ngIf="messages$ | async as messages; else loading">
+    <div *ngFor="let msg of messages" class="message">
+      💬 {{ msg }}
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <p>Loading messages...</p>
+  </ng-template>
+</div>

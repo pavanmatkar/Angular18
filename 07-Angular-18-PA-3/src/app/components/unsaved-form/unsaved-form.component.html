@@ -1,0 +1,12 @@
+<h3>🚫 Email Draft</h3>
+
+<form [formGroup]="form">
+    <label>Name:</label>
+    <input formControlName="name" type="text">
+
+    <label>Message:</label>
+    <textarea formControlName="message" rows="3"></textarea>
+
+    <br>
+    <button type="button" (click)="save()">Save</button>
+</form>

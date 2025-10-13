@@ -1,0 +1,10 @@
+<div class="profile-card" *ngIf="user; else loading">
+  <h2>👤 {{ user.name }}</h2>
+  <p><strong>Email:</strong> {{ user.email }}</p>
+  <p><strong>Bio:</strong> {{ user.bio }}</p>
+</div>
+
+<ng-template #loading>
+  <p>Loading profile data...</p>
+</ng-template>
+

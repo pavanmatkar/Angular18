@@ -1,0 +1,49 @@
+<div class="wizard-container">
+  <h2>🧙‍♂️ Loan Application</h2>
+
+  <!-- Step Indicators -->
+  <div class="steps">
+    <div [class.active]="currentStep === 0">1. Personal Info</div>
+    <div [class.active]="currentStep === 1">2. Loan Details</div>
+    <div [class.active]="currentStep === 2">3. Confirmation</div>
+  </div>
+
+  <form [formGroup]="form">
+    <!-- Step 1: Personal Info -->
+    <div *ngIf="currentStep === 0" formGroupName="personalInfo">
+      <label>First Name</label>
+      <input type="text" formControlName="firstName">
+
+      <label>Last Name</label>
+      <input type="text" formControlName="lastName">
+
+      <label>Email</label>
+      <input type="email" formControlName="email">
+    </div>
+
+    <!-- Step 2: Loan Details -->
+    <div *ngIf="currentStep === 1" formGroupName="loanDetails">
+      <label>Amount</label>
+      <input type="number" formControlName="amount">
+
+      <label>Term (months)</label>
+      <input type="number" formControlName="term">
+    </div>
+
+    <!-- Step 3: Confirmation -->
+    <div *ngIf="currentStep === 2" formGroupName="confirmation">
+      <label>
+        <input type="checkbox" formControlName="agree">
+        I agree to the terms and conditions
+      </label>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="buttons">
+      <button type="button" (click)="prevStep()" [disabled]="currentStep === 0">Previous</button>
+      <button type="button" (click)="nextStep()" *ngIf="currentStep < 2">Next</button>
+      <button type="button" (click)="submit()" *ngIf="currentStep === 2">Submit</button>
+    </div>
+  </form>
+</div>
+

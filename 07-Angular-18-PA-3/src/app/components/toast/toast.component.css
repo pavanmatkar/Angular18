@@ -1,0 +1,23 @@
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #28a745; /* green for success */
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0.95;
+  animation: fadein 0.3s, fadeout 0.3s 2.7s;
+}
+
+/* optional fade animations */
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 0.95; transform: translateY(0); }
+}
+
+@keyframes fadeout {
+  from { opacity: 0.95; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(20px); }
+}

@@ -1,0 +1,24 @@
+.board {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+.column {
+  width: 300px;
+  background: #f7f8fa;
+  border-radius: 8px;
+  padding: 12px;
+}
+.list {
+  min-height: 120px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px;
+}
+.task {
+  background: #e8ecf1;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: grab;
+}

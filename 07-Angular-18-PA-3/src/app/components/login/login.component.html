@@ -1,0 +1,18 @@
+<h1>🌐 My App</h1>
+<h2>🔐 Login</h2>
+<form (ngSubmit)="onSubmit()">
+  <input
+    [(ngModel)]="username"
+    name="username"
+    placeholder="Username"
+    required
+  />
+  <input
+    [(ngModel)]="password"
+    name="password"
+    placeholder="Password"
+    type="password"
+    required
+  />
+  <button type="submit">Login</button>
+</form>

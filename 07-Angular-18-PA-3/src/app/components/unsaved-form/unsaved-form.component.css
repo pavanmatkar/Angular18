@@ -1,0 +1,12 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+input, textarea {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}

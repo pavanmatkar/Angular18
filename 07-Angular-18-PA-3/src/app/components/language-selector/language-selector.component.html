@@ -1,0 +1,7 @@
+<div class="lang-selector">
+  <label>Select Language:</label>
+  <select [value]="currentLang()" (change)="change($any($event.target).value)">
+    <option value="en">English</option>
+    <option value="hi">हिन्दी</option>
+  </select>
+</div>

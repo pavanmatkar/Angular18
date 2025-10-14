@@ -1,0 +1,18 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="p-4 space-y-4 max-w-sm mx-auto">
+      <div>
+        <label>Password</label>
+        <input type="password" formControlName="password" class="border p-2 w-full rounded" />
+      </div>
+
+      <div>
+        <label>Confirm Password</label>
+        <input type="password" formControlName="confirmPassword" class="border p-2 w-full rounded" />
+        <p *ngIf="registerForm.errors?.['passwordMismatch'] && registerForm.touched" class="text-red-500 text-sm">
+          Passwords do not match!
+        </p>
+      </div>
+
+      <button [disabled]="registerForm.invalid" class="bg-blue-600 text-black px-4 py-2 rounded">
+        Register
+      </button>
+    </form>

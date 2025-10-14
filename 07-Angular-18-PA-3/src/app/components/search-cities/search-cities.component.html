@@ -1,1 +1,13 @@
-<p>search-cities works!</p>
+<div class="search-card">
+<label for="search">🏙️ Search cities</label>
+<input id="search" [formControl]="searchControl" placeholder="Type a city name..." />
+
+
+<ul *ngIf="filteredCities$ | async as cities">
+<li *ngIf="cities.length === 0">No matches found.</li>
+<li *ngFor="let c of cities">{{ c }}</li>
+</ul>
+
+
+<p class="hint">Showing {{ (filteredCities$ | async)?.length || 0 }} result(s)</p>
+</div>

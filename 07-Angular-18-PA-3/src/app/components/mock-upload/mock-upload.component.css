@@ -1,0 +1,66 @@
+.upload-card {
+  max-width: 420px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  font-family: system-ui, Segoe UI, Roboto;
+}
+.file-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+input[type="file"] {
+  flex: 1;
+}
+.btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #d0d0d0;
+  background: white;
+  cursor: pointer;
+}
+.btn.small {
+  font-size: 13px;
+  padding: 6px 8px;
+}
+.btn.danger {
+  border-color: #ff6b6b;
+  color: #b30f0f;
+}
+.meta {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 8px;
+  display: flex;
+  gap: 12px;
+}
+.progress-wrap {
+  margin-top: 8px;
+}
+.progress-bar {
+  height: 12px;
+  background: #eee;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  transition: width 0.25s linear;
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+}
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  gap: 8px;
+}
+.status {
+  margin-top: 10px;
+  color: #0a7;
+  font-weight: 600;
+}

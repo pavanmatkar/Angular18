@@ -1,0 +1,38 @@
+<div class="menu-container">
+  <h2>📂 Shopping Menu</h2>
+  <ul class="menu">
+    <ng-container *ngFor="let category of categories">
+      <li>
+        <span (click)="toggle(category)" class="menu-item">
+          {{ category.name }}
+          <span *ngIf="category.subcategories" class="arrow">
+            {{ expanded.has(category) ? "▼" : "▶" }}
+          </span>
+        </span>
+        <ul
+          *ngIf="category.subcategories && expanded.has(category)"
+          class="submenu"
+        >
+          <ng-container *ngFor="let sub of category.subcategories">
+            <li>
+              <span (click)="toggle(sub)" class="menu-item">
+                {{ sub.name }}
+                <span *ngIf="sub.subcategories" class="arrow">
+                  {{ expanded.has(sub) ? "▼" : "▶" }}
+                </span>
+              </span>
+              <ul
+                *ngIf="sub.subcategories && expanded.has(sub)"
+                class="submenu"
+              >
+                <li *ngFor="let subsub of sub.subcategories">
+                  {{ subsub.name }}
+                </li>
+              </ul>
+            </li>
+          </ng-container>
+        </ul>
+      </li>
+    </ng-container>
+  </ul>
+</div>

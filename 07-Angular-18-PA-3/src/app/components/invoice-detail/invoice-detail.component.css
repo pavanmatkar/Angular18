@@ -1,0 +1,16 @@
+.invoice-card {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: system-ui;
+}
+h2 {
+  margin-bottom: 12px;
+  color: #111827;
+}
+li {
+  margin-bottom: 6px;
+}

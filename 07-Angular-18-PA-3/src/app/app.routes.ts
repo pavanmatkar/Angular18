@@ -30,6 +30,21 @@ import { AboutComponent } from './components/about/about.component';
 import { CartDemoComponent } from './components/cart-demo/cart-demo.component';
 import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './core/guards/auth.guard';
+import { SearchCitiesComponent } from './components/search-cities/search-cities.component';
+import { NestedMenuComponent } from './components/nested-menu/nested-menu.component';
+import { ClickAnalyticsComponent } from './components/click-analytics/click-analytics.component';
+import { MockServiceErrorComponent } from './components/mock-service-error/mock-service-error.component';
+import { RealtimeNotificationsComponent } from './components/realtime-notifications/realtime-notifications.component';
+import { AutoFocusFormComponent } from './components/auto-focus-form/auto-focus-form.component';
+import { RoleBasedMenuComponent } from './components/role-based-menu/role-based-menu.component';
+import { BlogFilterQueryComponent } from './components/blog-filter-query/blog-filter-query.component';
+import { RegisterComponent } from './components/register/register.component';
+import { MockUploadComponent } from './components/mock-upload/mock-upload.component';
+import { InvoiceDetailComponent } from './components/invoice-detail/invoice-detail.component';
+import { InvoiceResolver } from './core/resolvers/invoice.resolver';
+import { FaqComponent } from './components/faq/faq.component';
+import { Home1Component } from './components/home1/home1.component';
+import { Example1Component } from './components/example1/example1.component';
 
 export const routes: Routes = [
     {
@@ -145,5 +160,66 @@ export const routes: Routes = [
     { path: '', component: HomeComponent, canActivate: [authGuard] },
     { path: 'login', component: LoginComponent },
     // 
+    {
+        path: 'search-cities',
+        component: SearchCitiesComponent
+    },
+    {
+        path: 'nested-menu',
+        component: NestedMenuComponent
+    },
+    {
+        path: 'click-analytics',
+        component: ClickAnalyticsComponent
+    },
+    {
+        path: 'mock-service-error',
+        component: MockServiceErrorComponent
+    },
+    {
+        path: 'realtime-notifications',
+        component: RealtimeNotificationsComponent
+    },
+    {
+        path: 'auto-focus-form',
+        component: AutoFocusFormComponent
+    },
+    {
+        path: 'role-based-menu',
+        component: RoleBasedMenuComponent
+    },
+    {
+        path: 'blog-filter-query',
+        component: BlogFilterQueryComponent
+    },
+    {
+        path: 'register',
+        component: RegisterComponent
+    },
+    {
+        path: 'mock-upload',
+        component: MockUploadComponent
+    },
+    // question 38 toast message after 3 second
+    {
+        path: 'example1',
+        component: Example1Component
+    },
+    // question 39 starts here
+    {
+        path: 'invoice/:id',
+        component: InvoiceDetailComponent,
+        resolve: { invoice: InvoiceResolver },  // 🔹 Resolver key 'invoice'
+    },
+    {   path: '', redirectTo: 'invoice/101', pathMatch: 'full' },
+    // question 39 ends here
+    {
+        path: 'faq',
+        component: FaqComponent
+    },
+    {
+        path: 'home1',
+        component: Home1Component
+    },
 ];
 

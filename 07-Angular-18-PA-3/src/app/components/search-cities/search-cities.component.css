@@ -1,0 +1,33 @@
+.search-card {
+max-width: 480px;
+padding: 1rem;
+border-radius: 8px;
+box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+background: #fff;
+font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+input {
+width: 100%;
+padding: 0.5rem;
+margin-top: 0.25rem;
+margin-bottom: 0.5rem;
+border: 1px solid #ddd;
+border-radius: 6px;
+font-size: 1rem;
+}
+ul {
+list-style: none;
+padding-left: 0;
+margin: 0.25rem 0;
+max-height: 240px;
+overflow: auto;
+}
+li {
+padding: 0.45rem 0.5rem;
+border-bottom: 1px solid #f3f3f3;
+}
+.hint {
+font-size: 0.85rem;
+color: #666;
+margin-top: 0.5rem;
+}

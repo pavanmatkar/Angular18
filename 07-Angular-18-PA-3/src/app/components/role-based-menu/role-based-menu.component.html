@@ -1,0 +1,15 @@
+<div class="menu-container">
+  <h2>🔐 Role-Based Menu</h2>
+
+  <div class="role-toggle">
+    <label>Select Role:</label>
+    <select [(ngModel)]="role" (change)="updateVisibleMenu()">
+      <option value="guest">Guest</option>
+      <option value="admin">Admin</option>
+    </select>
+  </div>
+
+  <ul>
+    <li *ngFor="let item of visibleMenu()">{{ item.label }}</li>
+  </ul>
+</div>

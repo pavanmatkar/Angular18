@@ -1,0 +1,23 @@
+<div class="form-container">
+  <h2>🔍 Login Form</h2>
+  <form>
+    <label>Username:</label>
+    <input
+      #usernameInput
+      type="text"
+      placeholder="Enter username"
+      [(ngModel)]="username"
+      name="username"
+    />
+
+    <label>Password:</label>
+    <input
+      type="password"
+      placeholder="Enter password"
+      [(ngModel)]="password"
+      name="password"
+    />
+
+    <button type="submit">Login</button>
+  </form>
+</div>

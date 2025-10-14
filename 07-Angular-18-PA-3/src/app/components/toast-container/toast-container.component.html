@@ -1,0 +1,17 @@
+<div class="toast-wrap" aria-live="polite" aria-atomic="true">
+  <div
+    *ngFor="let t of toasts | async"
+    class="toast"
+    [attr.data-type]="t.type"
+    (click)="dismiss(t.id)"
+  >
+    <div class="toast-msg">{{ t.message }}</div>
+    <button
+      class="toast-close"
+      aria-label="Dismiss"
+      (click)="dismiss(t.id); $event.stopPropagation()"
+    >
+      ✕
+    </button>
+  </div>
+</div>

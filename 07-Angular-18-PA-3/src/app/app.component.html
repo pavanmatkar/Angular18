@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="margin-top: 150px;">
   <div class="container-fluid">
     <a class="navbar-brand"
       ><img src="google.ico" style="width: 32px" alt=""
@@ -118,7 +118,55 @@
       <ul class="navbar-nav me-auto">
         <li class="nav-item" style="margin-top: -12px">
           <a class="nav-link" routerLink="login">Session Storage</a>
-        </li>   
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="search-cities">Search cities</a>
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="nested-menu">Nested Menu</a>
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="click-analytics">Click Analytics</a>
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="mock-service-error"
+            >Mock Service Error</a
+          >
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="realtime-notifications"
+            >Realtime Notifications</a
+          >
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="auto-focus-form">Auto Focus Form</a>
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="role-based-menu">Role Based Menu</a>
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="blog-filter-query"
+            >Blog Filter Query</a
+          >
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="register">Password Matching</a>
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="mock-upload">Upload Progress</a>
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="example1">Toast Message 3 sec</a>
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" [routerLink]="['/invoice', 101]">View Invoice 101 Spinner</a>
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="faq">FAQ</a>
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="home1">Home 1 Language</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -131,9 +179,20 @@
 <!-- Action button -->
 <button (click)="save()" class="btn btn-primary">Save</button>
 
-<!-- router outlet is a directive which is responsible to render activated route component -->
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
 <!-- modal host — place anywhere near root so it overlays whole app -->
 <app-modal></app-modal>
+<!-- question 35 below -->
+<app-history></app-history>
+<!-- question 38 below -->
+ <app-toast-container></app-toast-container>
+<!-- question 39 below -->
+ <app-spinner *ngIf="loading"></app-spinner>
+<!-- question 42 below-->
+<app-navbar></app-navbar>
+<div style="height: 100px; padding-top: 50px">
+  Scroll down to see navbar shrink and change color.
+</div>
+<!-- router outlet is a directive which is responsible to render activated route component -->
+<div class="container">
+  <router-outlet [@routeAnimations]="prepareRoute(outlet)"></router-outlet>
+</div>

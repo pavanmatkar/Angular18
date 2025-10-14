@@ -1,12 +1,10 @@
-<h1 style="text-align:center; margin-top:20px;">Sales Dashboard</h1>
+<h1 style="text-align: center; margin-top: 20px">Sales Dashboard</h1>
 <div class="chart-container">
-  <canvas baseChart
-  
+  <canvas
+    baseChart
+    [data]="chartData"
+    [type]="chartType"
+    [options]="chartOptions"
   >
-
-    <!-- [data]="barChartData" -->
-    <!-- [options]="barChartOptions" -->
-    <!-- [type]="barChartType" -->
-
   </canvas>
 </div>

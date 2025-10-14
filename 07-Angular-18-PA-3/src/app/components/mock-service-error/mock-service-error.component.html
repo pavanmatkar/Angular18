@@ -1,0 +1,10 @@
+<div class="error-container">
+  <h2>Data Loader</h2>
+  <button (click)="loadData()">Load Data</button>
+
+  <p *ngIf="loading()">Loading...</p>
+  <p *ngIf="errorMessage()" class="error">❌ {{ errorMessage() }}</p>
+  <ul *ngIf="data().length">
+    <li *ngFor="let item of data()">{{ item }}</li>
+  </ul>
+</div>

@@ -1,0 +1,26 @@
+<div class="blog-container">
+  <h2>✍️ Blog Posts</h2>
+
+  <div class="filters">
+    <p><strong>Filter by:</strong></p>
+    <button (click)="setQuery('author', 'John')">Author: John</button>
+    <button (click)="setQuery('author', 'Alice')">Author: Alice</button>
+    <button (click)="setQuery('category', 'Tech')">Category: Tech</button>
+    <button (click)="setQuery('category', 'Travel')">Category: Travel</button>
+    <button (click)="clearQuery()">Clear</button>
+  </div>
+
+  <div *ngIf="filteredPosts().length; else noResults">
+    <ul>
+      <li *ngFor="let post of filteredPosts()">
+        <strong>{{ post.title }}</strong> — {{ post.author }} ({{
+          post.category
+        }})
+      </li>
+    </ul>
+  </div>
+
+  <ng-template #noResults>
+    <p>❌ No posts found for this filter.</p>
+  </ng-template>
+</div>

@@ -1,0 +1,12 @@
+<div class="faq-container">
+  <h2>❓ Frequently Asked Questions</h2>
+  <div *ngFor="let item of faqs; let i = index" class="faq-item">
+    <button class="faq-question" (click)="toggle(i)">
+      {{ item.question }}
+      <span class="arrow">{{ item.open ? "▲" : "▼" }}</span>
+    </button>
+    <div class="faq-answer" *ngIf="item.open">
+      {{ item.answer }}
+    </div>
+  </div>
+</div>

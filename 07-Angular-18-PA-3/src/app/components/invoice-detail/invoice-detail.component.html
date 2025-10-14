@@ -1,0 +1,8 @@
+<ng-container *ngIf="invoice; else loading">
+  <h3>Invoice #{{ invoice.id }}</h3>
+  <p>Customer: {{ invoice.customer }}</p>
+  <p>Amount: ${{ invoice.amount }}</p>
+</ng-container>
+<ng-template #loading>
+  <app-spinner></app-spinner>
+</ng-template>

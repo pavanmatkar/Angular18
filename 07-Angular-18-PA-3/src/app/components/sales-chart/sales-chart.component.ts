@@ -2,18 +2,22 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ChartConfiguration, ChartType } from 'chart.js';
 // import { NgChartsModule } from 'ng2-charts';
+import { BaseChartDirective } from 'ng2-charts';
+import { Chart, registerables } from 'chart.js'; // Import registrables
 
+// ✅ Register all built-in chart types, elements, and scales
+Chart.register(...registerables);
 @Component({
   selector: 'app-sales-chart',
   standalone: true,
-  imports: [CommonModule],  //NgChartsModule
+  imports: [CommonModule, BaseChartDirective],  //NgChartsModule is outdated now we use BaseChartDirective
   templateUrl: './sales-chart.component.html',
   styleUrl: './sales-chart.component.css'
 })
 export class SalesChartComponent {
 
     // Mock monthly sales data
-  public barChartData: ChartConfiguration<'bar'>['data'] = {
+  public chartData: ChartConfiguration<'bar'>['data'] = {
     labels: [
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
       'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
@@ -29,7 +33,7 @@ export class SalesChartComponent {
     ]
   };
 
-  public barChartOptions: ChartConfiguration<'bar'>['options'] = {
+  public chartOptions: ChartConfiguration<'bar'>['options'] = {
     responsive: true,
     plugins: {
       legend: { position: 'top' },
@@ -48,6 +52,6 @@ export class SalesChartComponent {
     }
   };
 
-  public barChartType: ChartType = 'bar';
+  public chartType: 'bar' = 'bar';
 
 }

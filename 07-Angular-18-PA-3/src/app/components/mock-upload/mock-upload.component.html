@@ -1,0 +1,50 @@
+<div class="upload-card">
+  <h3>📤 Upload profile picture (mock)</h3>
+
+  <div class="file-row">
+    <input
+      type="file"
+      (change)="onFileSelected($event)"
+      [disabled]="uploading"
+    />
+    <button
+      (click)="triggerFileInput()"
+      [disabled]="uploading"
+      class="btn small"
+    >
+      Choose
+    </button>
+  </div>
+
+  <div *ngIf="file" class="meta">
+    <div class="name">{{ file.name }}</div>
+    <div class="size">{{ formatBytes(file.size) }}</div>
+  </div>
+
+  <div class="progress-wrap" *ngIf="showProgress">
+    <div class="progress-bar">
+      <div class="progress-fill" [style.width.%]="progress"></div>
+    </div>
+    <div class="progress-meta">
+      <span>{{ progress }}%</span>
+      <button
+        *ngIf="uploading"
+        (click)="cancelUpload()"
+        class="btn small danger"
+      >
+        Cancel
+      </button>
+      <button
+        *ngIf="!uploading && progress === 100"
+        (click)="reset()"
+        class="btn small"
+      >
+        Upload another
+      </button>
+    </div>
+  </div>
+
+  <div class="status" *ngIf="!uploading && progress === 100">
+    ✅ Upload complete
+  </div>
+</div>

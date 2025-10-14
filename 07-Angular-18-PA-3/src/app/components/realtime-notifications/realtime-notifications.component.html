@@ -1,0 +1,10 @@
+<div class="notification-container">
+  <h2>📲 Real-Time Notifications</h2>
+  <button (click)="toggleNotifications()">
+    {{ running() ? "Stop Notifications" : "Start Notifications" }}
+  </button>
+
+  <ul>
+    <li *ngFor="let msg of messages()">{{ msg }}</li>
+  </ul>
+</div>

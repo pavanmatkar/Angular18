@@ -1,0 +1,14 @@
+<div class="analytics-container">
+  <h2>🖱️ Click Analytics</h2>
+  <button (click)="logAction('Buy')">Buy</button>
+  <button (click)="logAction('Add to Cart')">Add to Cart</button>
+  <button (click)="logAction('Wishlist')">Wishlist</button>
+
+  <h3>Actions Logged:</h3>
+  <ul>
+    <li *ngFor="let a of actions()">
+      {{ a.timestamp | date : "shortTime" }} - {{ a.action }}
+    </li>
+  </ul>
+  <p>Total actions: {{ actions().length }}</p>
+</div>

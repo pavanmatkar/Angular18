@@ -1,4 +1,7 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="margin-top: 150px;">
+<nav
+  class="navbar navbar-expand-sm navbar-dark bg-dark"
+  style="margin-top: 150px"
+>
   <div class="container-fluid">
     <a class="navbar-brand"
       ><img src="google.ico" style="width: 32px" alt=""
@@ -34,9 +37,11 @@
         <li class="nav-item" style="margin-top: -12px">
           <a class="nav-link" routerLink="product-tabs">Product tabs</a>
         </li>
+        <!-- lazy loading starts here-->
         <li class="nav-item" style="margin-top: -12px">
-          <a class="nav-link" routerLink="reports">Reports LazyLoad</a>
+          <a class="nav-link" routerLink="home2">Reports LazyLoad</a>
         </li>
+        <!-- lazy loading ends here -->
         <li class="nav-item" style="margin-top: -12px">
           <a class="nav-link" routerLink="app-parent">App Parent</a>
         </li>
@@ -159,7 +164,9 @@
           <a class="nav-link" routerLink="example1">Toast Message 3 sec</a>
         </li>
         <li class="nav-item" style="margin-top: -12px">
-          <a class="nav-link" [routerLink]="['/invoice', 101]">View Invoice 101 Spinner</a>
+          <a class="nav-link" [routerLink]="['/invoice', 101]"
+            >View Invoice 101 Spinner</a
+          >
         </li>
         <li class="nav-item" style="margin-top: -12px">
           <a class="nav-link" routerLink="faq">FAQ</a>
@@ -167,26 +174,50 @@
         <li class="nav-item" style="margin-top: -12px">
           <a class="nav-link" routerLink="home1">Home 1 Language</a>
         </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="user-list">User List Trackby</a>
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="profile-form"
+            >Profile Calender Birthday</a
+          >
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="order-status"
+            >Order Status in Colors</a>
+        </li>
+        <!-- 46 question below -->
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="blog">Blog List</a>
+        </li>
+        <!-- 46 question ends here -->
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="multi-lang-demo">Multi Lang Demo</a>
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="profile1">Unsaved Changes</a>
+        </li>
+        <li class="nav-item" style="margin-top: -12px">
+          <a class="nav-link" routerLink="notification-bell"
+            >Notification Bell</a
+          >
+        </li>
       </ul>
     </div>
   </div>
 </nav>
-
-<!-- Second Navbar Ends Here -->
 <!-- Toast container (always present) -->
 <app-toast></app-toast>
-
 <!-- Action button -->
 <button (click)="save()" class="btn btn-primary">Save</button>
-
 <!-- modal host — place anywhere near root so it overlays whole app -->
 <app-modal></app-modal>
 <!-- question 35 below -->
 <app-history></app-history>
 <!-- question 38 below -->
- <app-toast-container></app-toast-container>
+<app-toast-container></app-toast-container>
 <!-- question 39 below -->
- <app-spinner *ngIf="loading"></app-spinner>
+<app-spinner *ngIf="loading"></app-spinner>
 <!-- question 42 below-->
 <app-navbar></app-navbar>
 <div style="height: 100px; padding-top: 50px">

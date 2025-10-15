@@ -1,0 +1,7 @@
+<h2>User List ({{ users.length }} users)</h2>
+<ul>
+  <li *ngFor="let user of users; trackBy: trackByUserId">
+    {{ user.name }} — {{ user.email }}
+  </li>
+</ul>
+

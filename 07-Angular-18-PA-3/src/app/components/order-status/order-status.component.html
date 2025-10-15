@@ -1,0 +1,10 @@
+<h2>Order Status</h2>
+
+<ul>
+  <li *ngFor="let order of orders">
+    <span [style.color]="getStatusColor(order.status)">
+      {{ getStatusIcon(order.status) }} {{ order.customer }} —
+      {{ order.status }}
+    </span>
+  </li>
+</ul>

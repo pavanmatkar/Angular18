@@ -1,0 +1,18 @@
+<h2>Profile Form</h2>
+
+<form>
+  <mat-form-field appearance="fill">
+    <mat-label>Birthdate</mat-label>
+    <input
+      matInput
+      [matDatepicker]="picker"
+      placeholder="Choose a date"
+      [(ngModel)]="birthDate"
+      name="birthDate"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <p *ngIf="birthDate">🎂 You selected: {{ birthDate | date : "longDate" }}</p>
+</form>

@@ -1,0 +1,8 @@
+<div class="notification-container">
+  <div class="bell" (click)="clearNotifications()">
+    🔔
+    <span class="badge" *ngIf="unreadCount() > 0">{{ unreadCount() }}</span>
+  </div>
+</div>
+
+<button (click)="addNotification()" class="add-btn">+ New Notification</button>

@@ -6,7 +6,19 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <aside class="bg-white w-80 min-h-screen pt-8 shadow-sm">
+    <!-- Hamburger button (visible on small screens) -->
+    <button
+      class="fixed top-4 left-4 z-50 bg-blue-500 text-white p-2 rounded-md md:hidden"
+      (click)="toggleSidebar()"
+    >
+      ☰
+    </button>
+    <aside class="bg-white w-80 min-h-screen pt-8 shadow-sm fixed md:relative z-40 transform transition-transform duration-300"
+    [ngClass]="{
+        '-translate-x-full': !isOpen && screenWidth < 700,
+        'translate-x-0': isOpen || screenWidth >= 700
+      }"
+    >
       <ul class="space-y-2 font-medium">
         <!-- Dashboard -->
         <li
@@ -186,4 +198,18 @@ import { Component } from '@angular/core';
   `,
   styleUrl: './sidebar.component.css',
 })
-export class SidebarComponent {}
+export class SidebarComponent {
+  isOpen = false;
+  screenWidth = window.innerWidth;
+
+  constructor() {
+    window.addEventListener('resize', () => {
+      this.screenWidth = window.innerWidth;
+      if (this.screenWidth >= 700) this.isOpen = true;
+    });
+  }
+
+  toggleSidebar() {
+    this.isOpen = !this.isOpen;
+  }
+}

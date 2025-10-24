@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { DashboardComponent } from "./Components/dashboard/dashboard.component";
 import { NavbarComponent } from "./Components/navbar/navbar.component";
 import { SidebarComponent } from "./Components/sidebar/sidebar.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',

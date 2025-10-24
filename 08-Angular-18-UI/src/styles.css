@@ -1,3 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
 @tailwind utilities;
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+}
+
+/* Optionally apply globally */
+body {
+  font-family: var(--font-poppins);
+}

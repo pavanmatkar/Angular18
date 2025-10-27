@@ -4,6 +4,11 @@
 
 @theme {
   --font-poppins: "Poppins", sans-serif;
+  --breakpoint-4xl: 3840px;
+  --breakpoint-3xl: 1920px;
+
+  /* Create your variant */
+  @variant 4xl (min-width: 3840px);
 }
 
 /* Optionally apply globally */

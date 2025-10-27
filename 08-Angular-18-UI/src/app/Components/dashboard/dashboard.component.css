@@ -29,6 +29,68 @@ canvas {
   max-width: 100%;
 }
 
+@theme {
+  /* Register the 4xl breakpoint */
+  @variant 4xl (min-width: 3840px);
+
+  /* 4xl Responsive Rules */
+  @4xl {
+    /* Increase overall padding */
+    .p-8 {
+      padding: 6rem !important;
+    }
+
+    /* Enlarge heading and text sizes for better readability */
+    .text-lg {
+      font-size: 1.75rem !important; /* ~28px */
+    }
+
+    .text-3xl {
+      font-size: 3.5rem !important; /* ~56px */
+    }
+
+    .text-xs {
+      font-size: 1rem !important; /* ~16px */
+    }
+
+    /* Make cards larger */
+    .w-\[400px\] {
+      width: 600px !important;
+    }
+
+    /* Increase chart height for better proportional layout */
+    canvas {
+      max-height: 700px !important;
+    }
+
+    /* Add more space between grid items */
+    .gap-6 {
+      gap: 3rem !important;
+    }
+
+    /* Improve visual padding inside cards */
+    .p-6 {
+      padding: 3rem !important;
+    }
+
+    /* Slightly enlarge select dropdowns */
+    select {
+      font-size: 1.125rem !important;
+      padding: 0.75rem 1.25rem !important;
+    }
+
+    /* Adjust circular progress components */
+    svg {
+      transform: scale(1.3);
+    }
+
+    /* Ensure text inside progress rings scales up */
+    .text-xl {
+      font-size: 2.5rem !important;
+    }
+  }
+}
+
 /* Media Query for 375px width */
 @media (max-width: 375px) {
   .p-8 {
@@ -48,3 +110,4 @@ canvas {
     height: auto !important;
   }
 }
+

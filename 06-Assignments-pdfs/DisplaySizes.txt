@@ -1,0 +1,27 @@
+1024×768     | 4:3        | Older desktops / small kiosks |
+| 1152×864     | 4:3        | Legacy displays               |
+| 1280×720     | 16:9       | HD720 (small / budget laptop) |
+| 1280×768     | 15:9       | Some laptops / small monitors |
+| 1280×800     | 16:10      | Netbooks / older laptops      |
+| 1280×1024    | 5:4        | Square-ish monitors (SXGA)    |
+| 1360×768     | ~16:9      | Low-end laptops (very common) |
+| 1366×768     | ~16:9      | Very common laptop display    |
+| 1400×1050    | 4:3        | Older wides, some workstations|
+| 1440×900     | 16:10      | MacBook Air (older), laptops  |
+| 1536×864     | 16:9      | Some ultrabooks / scaling     |
+| 1600×900     | 16:9       | Larger laptops, small monitors|
+| 1600×1200    | 4:3        | Professional older monitors   |
+| 1680×1050    | 16:10      | Widescreen monitors (older)   |
+| 1792×1120    | 16:10      | Some high-res laptops         |
+| 1920×1080    | 16:9       | Full HD / desktop standard    |
+| 1920×1200    | 16:10      | Professional monitors (WUXGA) |
+| 2048×1080    | ~17:9      | Some creative work displays   |
+| 2048×1152    | ~16:9      | High-density 2K-ish displays  |
+| 2560×1080    | 21:9       | UltraWide (single monitor)    |
+| 2560×1440    | 16:9       | QHD / 2K — common desktop     |
+| 2880×1800    | 16:10      | High-res laptops (retina-like)|
+| 3200×1800    | 16:9       | HiDPI laptop displays         |
+| 3440×1440    | 21:9       | UltraWide QHD                 |
+| 3840×2160    | 16:9       | 4K UHD — desktop & TVs
+
+

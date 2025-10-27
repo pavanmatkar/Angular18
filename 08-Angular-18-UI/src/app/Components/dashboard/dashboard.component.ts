@@ -11,54 +11,84 @@ Chart.register(...registerables);
   standalone: true,
   imports: [CommonModule, BaseChartDirective],
   template: `
-    <div class="p-8 bg-gray-100 min-h-screen w-full">
+    <div class="p-8 4xl:p-16 bg-gray-100 min-h-screen w-full">
       <!-- Cards Row -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-6">
-        <div class="bg-blue-500 rounded-xl p-6 text-white w-[400px]">
-          <div class="text-lg font-semibold">Total Income</div>
-          <div class="text-3xl font-bold mt-2">$579,000</div>
-          <div class="mt-2 text-xs opacity-80">Saved 25%</div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 4xl:grid-cols-4 gap-6 4xl:gap-10 mb-6 4xl:mb-10"
+      >
+        <div
+          class="bg-blue-500 rounded-xl 4xl:rounded-2xl p-6 4xl:p-10 text-white w-full sm:w-[300px] md:w-[350px] lg:w-[400px] 4xl:w-[480px]"
+        >
+          <div class="text-lg 4xl:text-2xl font-semibold">Total Income</div>
+          <div class="text-3xl 4xl:text-5xl font-bold mt-2 4xl:mt-4">
+            $579,000
+          </div>
+          <div class="mt-2 4xl:mt-4 text-xs 4xl:text-base opacity-80">
+            Saved 25%
+          </div>
         </div>
 
-        <div class="bg-sky-400 rounded-xl p-6 text-white w-[400px]">
-          <div class="text-lg font-semibold">Total Expenses</div>
-          <div class="text-3xl font-bold mt-2">$79,000</div>
-          <div class="mt-2 text-xs opacity-80">Saved 25%</div>
+        <div
+          class="bg-sky-400 rounded-xl 4xl:rounded-2xl p-6 4xl:p-10 text-white w-full sm:w-[300px] md:w-[350px] lg:w-[400px] 4xl:w-[480px]"
+        >
+          <div class="text-lg 4xl:text-2xl font-semibold">Total Expenses</div>
+          <div class="text-3xl 4xl:text-5xl font-bold mt-2 4xl:mt-4">
+            $79,000
+          </div>
+          <div class="mt-2 4xl:mt-4 text-xs 4xl:text-base opacity-80">
+            Saved 25%
+          </div>
         </div>
 
-        <div class="bg-purple-400 rounded-xl p-6 text-white w-[400px]">
-          <div class="text-lg font-semibold">Cash on Hand</div>
-          <div class="text-3xl font-bold mt-2">$92,000</div>
-          <div class="mt-2 text-xs opacity-80">Saved 25%</div>
+        <div
+          class="bg-purple-400 rounded-xl 4xl:rounded-2xl p-6 4xl:p-10 text-white w-full sm:w-[300px] md:w-[350px] lg:w-[400px] 4xl:w-[480px]"
+        >
+          <div class="text-lg 4xl:text-2xl font-semibold">Cash on Hand</div>
+          <div class="text-3xl 4xl:text-5xl font-bold mt-2 4xl:mt-4">
+            $92,000
+          </div>
+          <div class="mt-2 4xl:mt-4 text-xs 4xl:text-base opacity-80">
+            Saved 25%
+          </div>
         </div>
 
-        <div class="bg-green-300 rounded-xl p-6 text-white w-[400px]">
-          <div class="text-lg font-semibold">Net Profit Margin</div>
-          <div class="text-3xl font-bold mt-2">$179,000</div>
-          <div class="mt-2 text-xs opacity-80">Saved 65%</div>
+        <div
+          class="bg-green-300 rounded-xl 4xl:rounded-2xl p-6 4xl:p-10 text-white w-full sm:w-[300px] md:w-[350px] lg:w-[400px] 4xl:w-[480px]"
+        >
+          <div class="text-lg 4xl:text-2xl font-semibold">
+            Net Profit Margin
+          </div>
+          <div class="text-3xl 4xl:text-5xl font-bold mt-2 4xl:mt-4">
+            $179,000
+          </div>
+          <div class="mt-2 4xl:mt-4 text-xs 4xl:text-base opacity-80">
+            Saved 65%
+          </div>
         </div>
       </div>
 
       <!-- Charts and Budget Row -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Left: AP & AR Chart (50%) -->
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <div class="flex justify-between items-center mb-4">
-            <div>
-              <h2 class="text-lg font-semibold text-black">
-                AP and AR Balance
-              </h2>
-              <p class="text-sm text-purple-500">Avg. $5,309</p>
-            </div>
-            <div class="flex gap-2">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 4xl:gap-10">
+        <!-- Left: AP & AR Chart -->
+        <div class="bg-white rounded-xl 4xl:rounded-2xl p-6 4xl:p-10 shadow-sm">
+          <!-- Header section -->
+          <div class="mb-4 4xl:mb-6">
+            <h2 class="text-lg 4xl:text-3xl font-semibold text-black">
+              AP and AR Balance
+            </h2>
+            <p class="text-sm 4xl:text-xl text-purple-500">Avg. $5,309</p>
+
+            <!-- Dropdowns stacked below heading -->
+            <div class="flex gap-2 4xl:gap-4 mt-3 4xl:mt-6">
               <select
-                class="px-3 py-1 rounded-md border border-gray-200 text-sm text-gray-700"
+                class="px-3 4xl:px-5 py-1 4xl:py-2 rounded-md border border-gray-200 text-sm 4xl:text-lg text-gray-700"
               >
                 <option>Monthly</option>
                 <option>Weekly</option>
               </select>
+
               <select
-                class="px-3 py-1 rounded-md border border-gray-200 text-sm text-gray-700"
+                class="px-3 4xl:px-5 py-1 4xl:py-2 rounded-md border border-gray-200 text-sm 4xl:text-lg text-gray-700"
               >
                 <option>Last Year</option>
                 <option>This Year</option>
@@ -71,24 +101,26 @@ Chart.register(...registerables);
             [data]="chartData"
             [options]="chartOptions"
             [type]="chartType"
+            class="w-full 4xl:h-[500px]"
           ></canvas>
         </div>
 
-        <!-- Right: Budget Cards Combined (50%) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Right: Budget Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 4xl:gap-10">
           <!-- % of Income Budget -->
           <div
-            class="bg-white rounded-xl p-6 shadow-sm flex flex-col items-center justify-center"
+            class="bg-white rounded-xl 4xl:rounded-2xl p-6 4xl:p-10 shadow-sm flex flex-col items-center justify-center"
           >
-            <div class="text-gray-700 font-semibold mb-2">
+            <div
+              class="text-gray-700 font-semibold mb-2 4xl:mb-4 text-base 4xl:text-2xl"
+            >
               % of Income Budget
             </div>
 
             <div
-              class="relative w-24 h-24 mb-2 flex items-center justify-center"
+              class="relative w-24 h-24 4xl:w-40 4xl:h-40 mb-2 4xl:mb-4 flex items-center justify-center"
             >
               <svg class="w-full h-full" viewBox="0 0 100 100">
-                <!-- Background circle -->
                 <circle
                   cx="50"
                   cy="50"
@@ -97,8 +129,6 @@ Chart.register(...registerables);
                   stroke="#e5e7eb"
                   stroke-width="8"
                 />
-
-                <!-- Gradient definition -->
                 <defs>
                   <linearGradient
                     id="incomeGradient"
@@ -111,8 +141,6 @@ Chart.register(...registerables);
                     <stop offset="100%" stop-color="#10b981" />
                   </linearGradient>
                 </defs>
-
-                <!-- Foreground (colored) circle -->
                 <circle
                   cx="50"
                   cy="50"
@@ -127,33 +155,35 @@ Chart.register(...registerables);
                 />
               </svg>
 
-              <!-- Center text -->
               <div
-                class="absolute inset-0 flex flex-col items-center justify-center text-xl font-bold text-sky-500"
+                class="absolute inset-0 flex flex-col items-center justify-center text-xl 4xl:text-3xl font-bold text-sky-500"
               >
                 67%
-                <p class="text-xs text-gray-400 font-medium">Budget</p>
+                <p class="text-xs 4xl:text-lg text-gray-400 font-medium">
+                  Budget
+                </p>
               </div>
             </div>
 
-            <a href="#" class="text-sky-500 text-xs underline"
+            <a href="#" class="text-sky-500 text-xs 4xl:text-lg underline"
               >View Full Report</a
             >
           </div>
 
           <!-- % of Expenses Budget -->
           <div
-            class="bg-white rounded-xl p-6 shadow-sm flex flex-col items-center justify-center"
+            class="bg-white rounded-xl 4xl:rounded-2xl p-6 4xl:p-10 shadow-sm flex flex-col items-center justify-center"
           >
-            <div class="text-gray-700 font-semibold mb-2">
+            <div
+              class="text-gray-700 font-semibold mb-2 4xl:mb-4 text-base 4xl:text-2xl"
+            >
               % of Expenses Budget
             </div>
 
             <div
-              class="relative w-24 h-24 mb-2 flex items-center justify-center"
+              class="relative w-24 h-24 4xl:w-40 4xl:h-40 mb-2 4xl:mb-4 flex items-center justify-center"
             >
               <svg class="w-full h-full" viewBox="0 0 100 100">
-                <!-- Background Circle -->
                 <circle
                   cx="50"
                   cy="50"
@@ -162,8 +192,6 @@ Chart.register(...registerables);
                   stroke="#e5e7eb"
                   stroke-width="8"
                 />
-
-                <!-- Gradient Definition -->
                 <defs>
                   <linearGradient
                     id="expensesGradient"
@@ -176,8 +204,6 @@ Chart.register(...registerables);
                     <stop offset="100%" stop-color="#10b981" />
                   </linearGradient>
                 </defs>
-
-                <!-- Progress Ring -->
                 <circle
                   cx="50"
                   cy="50"
@@ -192,16 +218,17 @@ Chart.register(...registerables);
                 />
               </svg>
 
-              <!-- Center Text -->
               <div
-                class="absolute inset-0 flex flex-col items-center justify-center text-xl font-bold text-emerald-500"
+                class="absolute inset-0 flex flex-col items-center justify-center text-xl 4xl:text-3xl font-bold text-emerald-500"
               >
                 48%
-                <p class="text-xs text-gray-400 font-medium">Profit</p>
+                <p class="text-xs 4xl:text-lg text-gray-400 font-medium">
+                  Profit
+                </p>
               </div>
             </div>
 
-            <a href="#" class="text-sky-500 text-xs underline"
+            <a href="#" class="text-sky-500 text-xs 4xl:text-lg underline"
               >View Full Report</a
             >
           </div>
